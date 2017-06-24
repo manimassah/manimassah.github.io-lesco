@@ -41,42 +41,212 @@
 
 
     <!-- Page Header -->
-    <header class="masthead" style="color: none; height:200px">
+    <header style="color: none;">
 
-                    <div style="text-align:center; margin-top:200px; position: absolute; width: 100%; height:140px;background-color: black; opacity: 1"> </div>
-                     <div style="text-align:center; margin-top:210px; position: absolute; width: 100%;"">
+                    <div style="text-align:center;  position: absolute; width: 100%; height:140px;background-color: black; opacity: 1"> </div>
+                     <div style="text-align:center; margin-top:10px; position: absolute; width: 100%;"">
                         <a href="index.html" style="color: white">Home &nbsp | </a>
                          <a href="About.html" style="color: white">About Our School &nbsp | </a>
                         <a href="Programs.html" style="color: white" >&nbsp Programs and Services  &nbsp | </a>
                         <a href="Staff.html" style="color: white" > &nbsp Staff Info &nbsp | </a>
                         <a href="Contact.html" style="color: white" > &nbsp Contact Us </a>
-                        <h1 style="font-size: 80px; font-style: normal; font-variant: normal; height:100px; font-weight: 2000; opacity: 1.0" > Contact Us </h1> 
+                        <h1 style="font-size: 80px; color: white; font-style: normal; font-variant: normal; height:100px; font-weight: 2000;" > Contact Us </h1> 
                     </div>
 
+</header>
+
+<div style="height: 140px; width:100%;"></div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDnycWatbGyK6ldFqErjFtko1yeMclNUOA"></script> 
+
+<title>Lat/Lng Object Literal</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 400px;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCkkZLq-j6Nu4a718dqnWysw_ohIQy1FyM"></script>
+    <script>
+      // In this example, we center the map, and add a marker, using a LatLng object
+      // literal instead of a google.maps.LatLng object. LatLng object literals are
+      // a convenient way to add a LatLng coordinate and, in most cases, can be used
+      // in place of a google.maps.LatLng object.
+
+      var map;
+      function initialize() {
+        var mapOptions = {
+          zoom: 13,
+          center: {lat: 49.181239, lng: -123.086255}
+        };
+        map = new google.maps.Map(document.getElementById('map'),
+            mapOptions);
+
+        var marker = new google.maps.Marker({
+          // The below line is equivalent to writing:
+          // position: new google.maps.LatLng(-34.397, 150.644)
+          position: {lat: 49.181239, lng: -123.086255},
+          map: map
+        });
+
+        // You can use a LatLng literal in place of a google.maps.LatLng object when
+        // creating the Marker object. Once the Marker object is instantiated, its
+        // position will be available as a google.maps.LatLng object. In this case,
+        // we retrieve the marker's position using the
+        // google.maps.LatLng.getPosition() method.
+        var infowindow = new google.maps.InfoWindow({
+          content: '<p>Marker Location:' + marker.getPosition() + '</p>'
+        });
+
+        google.maps.event.addListener(marker, 'click', function() {
+          infowindow.open(map, marker);
+        });
+      }
+
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+ 
+
+ </head>
+  <body>
+    <div id="map"></div>
+         <div class="row">
+         </div>
+    </section>
+</body>
+
+<script>
+  $(document).ready(function() {
+    $('#contact_form').bootstrapValidator({
+        // To use feedback icons, ensure that you use Bootstrap v3.1.0 or later
+
+        .on('success.form.bv', function(e) {
+            $('#success_message').slideDown({ opacity: "show" }, "slow") // Do something ...
+                $('#contact_form').data('bootstrapValidator').resetForm();
+
+            // Prevent form submission
+            e.preventDefault();
+
+            // Get the form instance
+            var $form = $(e.target);
+
+            // Get the BootstrapValidator instance
+            var bv = $form.data('bootstrapValidator');
+
+            // Use Ajax to submit form data
+            $.post($form.attr('action'), $form.serialize(), function(result) {
+                console.log(result);
+            }, 'json');
+        });
+});
+
+</script>
+
+<div class="container" style= "margin-top:1%; width:50%; left:-15%">
+
+    <form class="well form-horizontal" action=" " method="post"  id="contact_form">
+<fieldset>
 
 
-     </header>
+<!-- Text input-->
 
+<div class="form-group">
 
-    <!-- Main Content -->
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-10 offset-lg-1 col-md-10 offset-md-1" style="margin-top: 100px">
-                <div class="post-preview">
-
-                       <p align="justify">
-                            
-
-
-
-</p> 
-
-            </div>
-        </div>
+  <div class="col-md-4 inputGroupContainer">
+  <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+  <input  name="first_name" placeholder="First Name" class="form-control"  type="text">
     </div>
-  
+  </div>
+</div>
 
+<!-- Text input-->
+
+<div class="form-group">
+
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+  <input name="last_name" placeholder="Last Name" class="form-control"  type="text">
+    </div>
+  </div>
+</div>
+
+<!-- Text input-->
+       <div class="form-group">
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+  <input name="email" placeholder="E-Mail Address" class="form-control"  type="text">
+    </div>
+  </div>
 </div>
 
 
-</body>
+<!-- Text input-->
+       
+<div class="form-group">
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+  <input name="phone" placeholder="Phone Number" class="form-control" type="text">
+    </div>
+  </div>
+</div>
+
+<!-- Text input-->
+      
+<div class="form-group">
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+  <input name="address" placeholder="City" class="form-control" type="text">
+    </div>
+  </div>
+</div>
+
+
+<!-- Text area -->
+  
+<!-- Success message -->
+<div class="alert alert-success" role="alert" id="success_message">Success <i class="glyphicon glyphicon-thumbs-up"></i> Thanks for contacting us, we will get back to you shortly.</div>
+
+</fieldset>
+</form>
+</div>
+    </div><!-- /.container -->
+
+<div class="container" style= "top:-268px; width:100%; left:25%">
+
+<div class="form-group">
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+            <textarea class="form-control" name="comment" placeholder="Please enter your message here" style="height:250px"></textarea>
+  </div>
+</div>
+  </div>
+
+<!-- Button -->
+  <div style= "position:relative; left: -15%">
+    <button style= "width:870px;" type="submit" class="btn btn-warning" >Send <span class="glyphicon glyphicon-send"></span></button>
+      </div>
+
+<div style="position:absolute; left:700px; top: 70px; width:400px; text-align: center">
+<h4>
+12720 Cameron Drive <br>
+Richmond, British Columbia <br>
+V6V 2T6 <hr>
+<i class="fa fa-phone" aria-hidden="true"></i> (604) 279-4228
+
+</h4>
+<div>
