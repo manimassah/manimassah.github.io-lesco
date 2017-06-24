@@ -150,12 +150,18 @@ header.masthead {
   background: no-repeat;
   background-color: #777777;
   background-attachment: scroll;
-  color: black;
+  color: white;
       text-shadow:
-    -0px -0px 5px #D3D3D3,
-    0px -0px 5px #D3D3D3,
-    -0px 0px 5px #D3D3D3,
-    0px 0px 5px #D3D3D3;  
+    -0px -0px 2px #000000,
+    0px -0px 2px #000000,
+    -0px 0px 2px #000000,
+    0px 0px 2px #000000,
+  -1px -1px 2px #000000,
+    1px -1px 2px #000000,
+    -1px 1px 2px #000000,
+    1px 1px 2px #000000; 
+
+
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
