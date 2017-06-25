@@ -249,11 +249,38 @@ V6V 2T6 <br><br>
     </div>
 </div>
 
-  
-<!-- Success message -->
-<div class="alert alert-success" role="alert" id="success_message">Success <i class="glyphicon glyphicon-thumbs-up"></i> Thanks for contacting us, we will get back to you shortly.</div>
-
 </fieldset>
 </form>
 </div>
     </div><!-- /.container -->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Feedback Form</title>    
+</head>
+<body>
+<h1>Send Us Your Feedback!</h1>
+<form action="send_mail.php" method="post">
+<table>
+<tr>
+<td>Email Adress:</td>
+<td>
+<input type="text" name="email_address" value="" maxlength="100" />
+</td>
+</tr>
+<tr>
+<td>Comments:</td>
+<td>
+<textarea rows="10" cols="50" name="comments"></textarea>
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td>
+<input type="submit" value="Submit" />
+</td>
+</tr>
+</table>
+</form>
+</body>
+</html>
