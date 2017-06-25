@@ -151,20 +151,24 @@
 
 </script>
 
-<div class="container" style= "margin-top:1%; width:50%; left:-15%">
 
     <form class="well form-horizontal" action=" " method="post"  id="contact_form">
 <fieldset>
 
 
+<div style="width: 80%; display: table; margin: auto;
+    padding: 10px;""
+}">
+    <div style="display: table-row ">
+        <div style="width: 20%; display: table-cell"> 
 <!-- Text input-->
 
 <div class="form-group">
 
-  <div class="col-md-4 inputGroupContainer">
+  <div class=" inputGroupContainer">
   <div class="input-group">
   <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-  <input  name="first_name" placeholder="First Name" class="form-control"  type="text">
+  <input  style="text-align: center" name="first_name" placeholder="First Name" class="form-control"  type="text">
     </div>
   </div>
 </div>
@@ -173,20 +177,20 @@
 
 <div class="form-group">
 
-    <div class="col-md-4 inputGroupContainer">
+    <div class=" inputGroupContainer">
     <div class="input-group">
   <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-  <input name="last_name" placeholder="Last Name" class="form-control"  type="text">
+  <input style="text-align: center" name="last_name" placeholder="Last Name" class="form-control"  type="text">
     </div>
   </div>
 </div>
 
 <!-- Text input-->
        <div class="form-group">
-    <div class="col-md-4 inputGroupContainer">
+    <div class=" inputGroupContainer">
     <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-  <input name="email" placeholder="E-Mail Address" class="form-control"  type="text">
+  <input style="text-align: center" name="email" placeholder="E-Mail Address" class="form-control"  type="text">
     </div>
   </div>
 </div>
@@ -195,10 +199,10 @@
 <!-- Text input-->
        
 <div class="form-group">
-    <div class="col-md-4 inputGroupContainer">
+    <div class=" inputGroupContainer">
     <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
-  <input name="phone" placeholder="Phone Number" class="form-control" type="text">
+  <input style="text-align: center" name="phone" placeholder="Phone Number" class="form-control" type="text">
     </div>
   </div>
 </div>
@@ -206,16 +210,45 @@
 <!-- Text input-->
       
 <div class="form-group">
-    <div class="col-md-4 inputGroupContainer">
+    <div class="inputGroupContainer">
     <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-  <input name="address" placeholder="City" class="form-control" type="text">
+  <input style="text-align: center" name="address" placeholder="City" class="form-control" type="text">
+    </div>
+  </div>
+</div>
+ </div>
+
+
+
+
+        <div style="width: 24%; display: table-cell; padding-left: 2%; padding-right: 2%">        
+<div class="form-group" >
+    <div class="inputGroupContainer" >
+    <div class="input-group">
+        <span style="height: 50px" ></span>
+  <input style="margin-left: 10px; margin-top: 30px; height:200px; text-align: center" name="phone" placeholder="Please enter your message here" class="form-control" type="text">
     </div>
   </div>
 </div>
 
 
-<!-- Text area -->
+<!-- Button -->
+    <button style= "margin-left: 2%; padding: 10px;width:97%;" type="submit" class="btn btn-warning" >Send <span class="glyphicon glyphicon-send"></span></button>
+ </div>
+
+    <div style="width: 20%; display: table-cell">        
+<h4 style="text-align: center; margin-left:-20%"><br>
+<br>12720 Cameron Drive <br>
+Richmond, British Columbia <br>
+V6V 2T6 <br><br>
+<i class="fa fa-phone" aria-hidden="true"></i> (604) 279-4228
+
+</h4>
+ </div>
+    </div>
+</div>
+
   
 <!-- Success message -->
 <div class="alert alert-success" role="alert" id="success_message">Success <i class="glyphicon glyphicon-thumbs-up"></i> Thanks for contacting us, we will get back to you shortly.</div>
@@ -224,29 +257,3 @@
 </form>
 </div>
     </div><!-- /.container -->
-
-<div class="container" style= "top:-270px; width:100%; left:25%">
-
-<div class="form-group">
-    <div class="col-md-4 inputGroupContainer">
-    <div class="input-group">
-        <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-            <textarea class="form-control" name="comment" placeholder="Please enter your message here" style="height:250px"></textarea>
-  </div>
-</div>
-  </div>
-
-<!-- Button -->
-  <div style= "position:relative; left: -15%">
-    <button style= "width:870px;" type="submit" class="btn btn-warning" >Send <span class="glyphicon glyphicon-send"></span></button>
-      </div>
-
-<div style="position:absolute; left:700px; top: 70px; width:400px; text-align: center">
-<h4>
-12720 Cameron Drive <br>
-Richmond, British Columbia <br>
-V6V 2T6 <hr>
-<i class="fa fa-phone" aria-hidden="true"></i> (604) 279-4228
-
-</h4>
-<div>
